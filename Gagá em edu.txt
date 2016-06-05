@@ -17,9 +17,24 @@ Distribuição das matérias na semana
 5.	Tempo para simulado no fim de semana, a partir do meio do ano
 
 Problemas
-1.	É aconselhável colocar no máximo 3 matérias pro aluno estudar no dia, porém os alunos de cursinho normalmente têm 30 matérias diferentes na semana: 5 mats, 4 fis, 4 qui, 3 geo, 3 hist, red , gram, interpretação, literatura, inglês, 4 bio, sócio\filo
+1.	É aconselhável colocar no máximo 3 matérias pro aluno estudar no dia, porém os alunos de cursinho normalmente têm 30 matérias diferentes na semana: 5 mat, 4 fis, 4 qui, 3 geo, 3 hist, red , gram, interpretação, literatura, inglês, 4 bio, sócio\filo. Sugestão colocar algumas frentes em semanas alternadas
 
 Critérios para ajustes por Machine learning
 1.	Resultados em simulados
 2.	Feedbacks de dificuldade com a matéria
-Além disso, é dito que é bom definir tarefas específicas antes de começar a estuda. Sugestão seria o app, sugerir que o aluno faça isso antes de ativar o timer de começo de estudo
+Além disso, é dito que é bom definir tarefas específicas antes de começar a estudar. Sugestão seria o app sugerir que o aluno faça isso antes de ativar o timer de começo de estudo
+
+Como funcionaria o app:
+Cadastro inicial: Pergunta-se a dificuldade em cada matéria e o vestibular e curso que ele quer, e preenche-se que horários o aluno tem livre diariamente, estilo when2meet.
+
+peso por matéria matéria = (peso devido a curso e vestibular)x(peso devido a dificuldade)
+Tempo de estudos por matéria: (tempo disponível total)x(peso matéria)/(peso total)
+
+Distribuição das matérias na semana
+porcentagens do tempo disponível por dia: 24 22 20 18 16 | simulado e horário extra no fds
+tender a colocar matérias que o aluno menos gosta, e que portanto exigem mais tempo, no começo da semana
+Horário organizado em blocos de 2x (30 a 45 minutos), com intervalos de 5 minutos no meio. varia de 30 a 45, dependendo do horário semanal disponível
+
+Antes de cada horário, o aplicativo manda uma notificação pedindo pra pensar no que vai fazer pra estudar a matéria, após essa etapa, ele inicia um timer com o tempo que está previsto estudares, tocando pro intervalo e pra sair do intervalo.
+
+Ao fim de cada semana, ele mostra o horário e pede pra dizer se gostou ou não do posicionamento de cada bloco. Além disso, ao fim da semana ele pede pra colocares sua nota no simulado antigo.
