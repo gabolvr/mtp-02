@@ -1,0 +1,25 @@
+Condições iniciais para montagem do horário de estudo
+
+Fatores a considerar
+Carga horária inicial por matéria
+1.	Dificuldade com a matéria, 3 níveis, que terão pesos 3, 5, 7 na determinação do tempo de estudo
+2.	Vestibular, usar peso do edital
+3.	Curso, usar peso do edital
+4.	Tempo Disponível, informado pelo aluno
+Multiplica os pesos de facilidade com o de vestibular+curso, divide pelo peso total e multiplica pelo tempo disponível do aluno.
+Como determinar o tempo total do aluno¿ cadastro inicial, com um horário de cada dia, estilo when2meet
+
+Distribuição das matérias na semana
+1.	Blocos de 2x 45 min com 5 min no meio para necessidades e relaxamento(pomodoro counter seria bizu)
+2.	Horário extra em alguns pontos da semana, para caso tenha ocorrido um imprevisto que impediu o aluno de estudar
+3.	Concentrar estudo mais pesado no início da semana, matérias que o aluno tem mais dificuldade e um pouco mais de carga horária. Distribuição-modelo semanal: 0.22 0.2 0.18 0.16 0.16 0.16(esse último pra todo o final de semana). Note que a soma é 1.08, onde esse 0.08 adicionais equivale ao horário extra
+4.	Evitar colocar matérias de mesma área seguidas
+5.	Tempo para simulado no fim de semana, a partir do meio do ano
+
+Problemas
+1.	É aconselhável colocar no máximo 3 matérias pro aluno estudar no dia, porém os alunos de cursinho normalmente têm 30 matérias diferentes na semana: 5 mats, 4 fis, 4 qui, 3 geo, 3 hist, red , gram, interpretação, literatura, inglês, 4 bio, sócio\filo
+
+Critérios para ajustes por Machine learning
+1.	Resultados em simulados
+2.	Feedbacks de dificuldade com a matéria
+Além disso, é dito que é bom definir tarefas específicas antes de começar a estuda. Sugestão seria o app, sugerir que o aluno faça isso antes de ativar o timer de começo de estudo
