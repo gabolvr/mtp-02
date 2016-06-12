@@ -1,0 +1,41 @@
+<head>
+	<meta charset="UTF-8"/>
+	<link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet' />
+	<link href='./lib/fullcalendar/fullcalendar.css' rel='stylesheet' />
+
+	<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js'></script>
+	<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.7.2/fullcalendar.min.js'></script>
+	-->
+	<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.7.2/lang-all.js'></script>
+	-->
+	<script src='./lib/fullcalendar/pt-br.js'></script>
+	<script src='./lib/fullcalendar/fullcalendar.js'></script>
+
+	<script src='./js/run.js'></script>
+
+	<style>
+	body {
+		background-color: #f6f1ed;
+		color: #667467;
+		font-family: 'Lucida Sans Typewriter';
+	}
+	</style>
+</head>
+<body class='container-fluid text-center'>
+	Matérias:
+	<br>
+	<span id='subject-list'>
+	
+	</span>
+	<button onclick='addSubjectForm()' class='glyphicon glyphicon-plus'></button>
+	<br><br><br>
+
+	<!--<button onclick="toggleCalendar()" class='btn btn-default'>Abrir calendário</button> -->
+	<button onclick="transformFreeTimeIntoStudy()" class='btn btn-default'>Gerar horário</button>
+	<button onclick="removeAllEvents()" class='btn btn-default'>Resetar</button>
+	<div id='calendar'>
+	</div>
+
+</body>
