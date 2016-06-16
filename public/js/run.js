@@ -98,7 +98,9 @@ function addNewEvent(title, start, duration) {
          );
 }
 
-var subjectForm = "<input class='subject-form'><br>";
+var subjectForm = "<div class='materia'><p><input placeholder='Matéria' class='subject-form'></p><p>Fácil<input class='dif' type='range' max='5' min='1' step='1' style='width:50px; margin: auto'>Difícil</p></div>";
+
+
 
 function addSubjectForm() {
   $('#subject-list').append(subjectForm);
@@ -106,7 +108,15 @@ function addSubjectForm() {
 
 
 function* getSubjects(){
-  var subjs = $('.subject-form').toArray().map(x => x.value); 
+  var subjs = $('.subject-form').toArray().map(x => x.value);
+  var difs = $('.dif').toArray().map(x => x.value);
+  console.log(subjs);
+  console.log(difs);
+  for (var i = 0; i < difs.length; i++){
+    for (var j = 1; j < difs[i]; j++)
+      subjs.push(subjs[i]);
+  }
+  console.log(subjs);
   while(true) {
     shuffleArray(subjs);
     for(var i = 0; i != subjs.length; ++i)
