@@ -1,0 +1,32 @@
+1º Ligar o banco de dados
+
+Abra um terminal do windows
+Execute: mongod
+
+---------------
+2º Ligar o servidor
+
+Abra OUTRO terminal do windows
+Mude para este diretório aqui (com o cd)
+Execute: node servidor.js
+
+---------------
+3º Acessar o site
+
+Digite localhost:8080/ no browser
+---------------
+4º Monitorar o banco de dados
+
+Abra OUTRO terminal do windows
+Execute: mongo
+Agora use os comandos nativos do shellMongoDB (A database se chama "dados" e a collection se chama "users")
+Ex:
+use dados
+db.users.find() vai mostrar todos os usuários
+
+----
+
+Divirta-se!
+
+
+

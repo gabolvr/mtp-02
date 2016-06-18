@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="icon.png">
+
+    <title>Contato- Quero dicas</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/justified-nav.css" rel="stylesheet">
+
+    <!-- Custom font style-->
+    <link href='css/Montserrat.css' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+
+    <style>
+    body {
+      font: 400 16px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+      font-family: Montserrat, sans-serif;
+    }
+    h2 {
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #303030;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    h4 {
+        font-size: 19px;
+        line-height: 1.375em;
+        color: #303030;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+    .jumbotron {
+      color: #fff;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      font-family: Montserrat, sans-serif;
+    }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- The justified navigation menu is meant for single line per list item.
+           Multiple lines will require custom code not provided by Bootstrap. -->
+      <div class="masthead">
+        <img src="logo.png" style="height:90px; width:230px">
+        <nav>
+          <ul class="nav nav-justified">
+            <li><a href="/">Página inicial <span class="glyphicon glyphicon-home"></a></li>
+            <li><a href="/comofunciona">Como funciona <span class="glyphicon glyphicon-cog"></a></li>
+            <li><a href="/historias">Histórias de sucesso <span class="glyphicon glyphicon-education"></a></li>
+            <li><a href="/sobre">Quem somos <span class="glyphicon glyphicon-user"></a></li>
+            <li class="active"><a href="/contato">Contato <span class="glyphicon glyphicon-envelope"></a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <br>
+      <br>
+      <div class="container">
+        <h2>Fale conosco!</h2>
+        <form role="form" method="post" action="contact-form-handler.php">
+          <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="name" class="form-control" id="name" placeholder="Digite o seu nome." maxlength="50">
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Digite o seu email." maxlength="50">
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem:</label>
+            <textarea class="form-control" rows="5" id="message" placeholder="Digite a sua mensagem (máximo 200 letras)." maxlength="200"></textarea>
+          </div>
+          <button type="send" class="btn btn-default">Enviar <span class="glyphicon glyphicon-send"></button>
+        </form>
+      </div>
+
+    </div>
+
+  </body>
+
+  <script src="jquery/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</html>

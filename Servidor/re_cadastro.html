@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="jquery/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="display.js"></script>
+    <meta charset="utf-8">
+
+  </head>
+
+  <body>
+    <div class="container-fluid">
+
+    <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+    <form role="form" method="post" action="/cadastrar">
+
+
+
+
+      <h2>Cadastro de Aluno</h2>  <!-- originalmente tinha uma tag small aí dentro , falando free forever etc -->
+      <hr class="colorgraph">   <!-- tracinho estiloso -->
+
+
+
+      <!-- início dados do site -->
+      <h4>Dados do site</h4>
+      <div style = "font-size:15px; color:red">Nome de usuário já cadastrado</div></br>
+      <div class="form-group">
+        <input type="text" name="usuario" id="usuario" class="form-control input-lg" placeholder="Usuário" tabindex="3">
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email" tabindex="4">
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <input type="password" name="senha" id="senha" class="form-control input-lg" placeholder="Senha" tabindex="5">
+          </div>
+        </div>
+      </div>
+
+
+      <!-- fim dados do site -->
+
+
+
+      <!---  início dados faculdade  -->
+      <hr class="colorgraph">   <!-- tracinho estiloso -->
+      <h4>Dados pessoais</h4>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+               <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="Nome" tabindex="1">
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+            <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Sobrenome" tabindex="2">
+          </div>
+        </div>
+      </div>
+
+      </br>
+
+
+      <h4>Escolher seu rumo profissional pode ser uma decisão muito difícil. Aqui na Paraíba Valley, nosso objetivo é ajudar tanto aqueles que já sabem o que querem quanto os que ainda estão em dúvida. Você já tem uma carreira em mente?</h4>
+
+      <select name = "decidido" id="decidido" onchange="checar(this, 'FLAG_decidido', 'IF_decidido');">
+        <option id="FLAG_decidido" value="true">Sim</option>
+        <option value="false" selected>Não</option>
+      </select>
+
+      </br>
+
+
+      <div id="IF_decidido" style="display:none;">
+        <h5>
+          Curso pretendido:
+        </h5>
+        <input type="text" name="curso" id="curso" class="form-control input-lg"  tabindex="3">
+      </div>
+
+      <h5>Série escolar</h5>
+
+      <select id="serie" name="serie" onchange="checar(this, 'FLAG_serie', 'IF_serie');">
+
+        <option value="fundamental" selected>Ensino Fundamental</option>
+        <option value="1ou2">1º ou 2º ano do Ensino Médio</option>
+        <option value="3ouFormado" id="FLAG_serie">3º ano do Ensino Médio ou formado</option>
+
+      </select>
+
+      </br>
+
+      <div id="IF_serie" style="display:none;">
+        <h5>
+          Vestibulares que prestará (Separar por barra):
+        </h5>
+        <h5>
+          <i>
+            Exemplo:Enem/Fuvest/Unesp
+          </i>
+        </h5>
+
+        <input type="text" class="form-control input-lg" id="vestibulares"  name="vestibulares"> </input>
+        </br>
+      </div>
+
+      <!-- Facilidades  -->
+      <h5>
+            Matérias em que apresenta facilidade:
+      </h5>
+
+      <div class="row">
+        <div class="col-md-4">
+          <input type="checkbox" id="dificuldade_mat" name="dificuldade_mat">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            Matemática
+          </span>
+        </div>
+
+        <div class="col-md-4">
+          <input type="checkbox" id="dificuldade_fis" name="dificuldade_fis">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            Física
+          </span>
+        </div>
+
+        <div class="col-md-4">
+          <input type="checkbox" id="dificuldade_quim" name="dificuldade_quim">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            Química
+          </span>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <input type="checkbox" iid="dificuldade_hist" name="dificuldade_hist">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            História
+          </span>
+        </div>
+
+        <div class="col-md-4">
+          <input type="checkbox" id="dificuldade_geo" name="dificuldade_geo">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            Geografia
+          </span>
+        </div>
+
+        <div class="col-md-4">
+          <input type="checkbox" id="dificuldade_bio" name="dificuldade_bio">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            Biologia
+          </span>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <input type="checkbox" id="dificuldade_port" name="dificuldade_port">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            Português
+          </span>
+        </div>
+
+        <div class="col-md-4">
+          <input type="checkbox" id="dificuldade_red" name="dificuldade_red">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            Redação
+          </span>
+        </div>
+
+        <div class="col-md-4">
+          <input type="checkbox" id="dificuldade_filo" name="dificuldade_filo">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            Filosofia
+          </span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <input type="checkbox" id="dificuldade_socio" name="dificuldade_socio">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            Sociologia
+          </span>
+        </div>
+      </div>
+
+      </br>
+      <!--- Matérias com dificuldade -->
+      <h5>
+            Matérias em que apresenta dificuldade:
+      </h5>
+
+         <div class="row">
+        <div class="col-md-4">
+          <input type="checkbox" id="facilidade_mat" name="facilidade_mat">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            Matemática
+          </span>
+        </div>
+
+        <div class="col-md-4">
+          <input type="checkbox" id="facilidade_fis" name="facilidade_fis">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            Física
+          </span>
+        </div>
+
+        <div class="col-md-4">
+          <input type="checkbox" id="facilidade_quim" name="facilidade_quim">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            Química
+          </span>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <input type="checkbox" iid="facilidade_hist" name="facilidade_hist">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            História
+          </span>
+        </div>
+
+        <div class="col-md-4">
+          <input type="checkbox" id="facilidade_geo" name="facilidade_geo">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            Geografia
+          </span>
+        </div>
+
+        <div class="col-md-4">
+          <input type="checkbox" id="facilidade_bio" name="facilidade_bio">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            Biologia
+          </span>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <input type="checkbox" id="facilidade_port" name="facilidade_port">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            Português
+          </span>
+        </div>
+
+        <div class="col-md-4">
+          <input type="checkbox" id="facilidade_red" name="facilidade_red">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            Redação
+          </span>
+        </div>
+
+        <div class="col-md-4">
+          <input type="checkbox" id="facilidade_filo" name="facilidade_filo">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            Filosofia
+          </span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <input type="checkbox" id="facilidade_socio" name="facilidade_socio">  <!-- inicialmente unchecked -->
+          <span style="font-size:16px;">
+            Sociologia
+          </span>
+        </div>
+      </div>
+
+      <!---  FIM DO  DADOS-->
+
+      <hr class="colorgraph">
+      <div class="row">  <!-- INICIA O ROW -->
+
+
+      <div class="col-xs-2 col-md-2"></div>
+      <div class="col-xs-8 col-md-8"><input type="submit" value="Registrar" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+
+
+        <!--  Botão  de sign in
+        <div class="col-xs-12 col-md-6"><a href="#" class="btn btn-success btn-block btn-lg">Sign In</a></div>
+        -->
+
+
+      </div> <!-- FECHA O ROW -->
+
+
+    </form>
+  </div>
+</div>
+</div>
+
+  </body>
+</html>
