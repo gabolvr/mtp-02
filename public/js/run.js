@@ -74,7 +74,7 @@ function transformFreeTimeIntoStudy() {
 
 function divideIntoStudyEvents(event, subjects) {
   minuteDiff = event.end.diff(event.start, 'minutes');
-  var studyDuration = 60;
+  var studyDuration = 30;
   
   var numFullIntervals = Math.floor(minuteDiff / studyDuration);
   for(var k = 0; k != numFullIntervals; ++k) {
