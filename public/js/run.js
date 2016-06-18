@@ -72,6 +72,10 @@ function transformFreeTimeIntoStudy() {
   console.log(calendar.fullCalendar('clientEvents', function(event){return event.title=='MAT';}))
 }
 
+function cleanSchedule(){
+  calendar.fullCalendar('removeEvents');
+}
+
 function divideIntoStudyEvents(event, subjects) {
   minuteDiff = event.end.diff(event.start, 'minutes');
   var studyDuration = 30;
